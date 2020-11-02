@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity seg4 is
+port(dat : in std_logic_vector(3 downto 0);
+		a,b,c,d,e,f,g ; out std  logic);
+end seg4;
+architecture arc of seg4 is
+	signal tmp : std_logic_vector(6 downto 0);
+begin
+	process(dat)
+	begin
+		a<=dat(3);
+		b<=dat(2);
+		c<=dat(1);
+		d<=dat(0);
+	end process;
+end arc;

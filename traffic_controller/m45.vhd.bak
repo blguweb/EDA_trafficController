@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity m45 is
+port(
+		CLK : in std_logic;
+		EN  : in std_logic;
+		CR  : in std_logic;
+		QL,QH : out std_logic_vector(3 downto 0);
+		OC  : out std_logic
+		);
+end m45;
+
+
+
+
+architecture behav of m45 is
+	signal couL,couH: std_logic_vector(3 downto O);
+begin
+	process(CR,CLK,EN)
+	begin
+		if CR='0’then
+			couL <="0000";
+			couH <="0000";
+		elsif clk'event and clk='l' then
+			if EN='1' then
+				if ( couL=0 and couH=0)then
+					couL<="0100";
+					couH< ="0100";
+				elsif couL=0 then
+					couL<="1001";
+					couH<=couH-l;
+				else
+					couL< =couL-1;
+				end if;
+			end if;
+		end if;
+	end process;
+
+process(couL,couH)
+begin
+	if(couL=0 and couH=0) then
+	OC<='l';
+	else
+		OC<='0';
+	end if;
+end process;
+	QL<=couL;
+	QH<=couH;
+end behav;

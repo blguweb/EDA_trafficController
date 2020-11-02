@@ -1,0 +1,1272 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--E1_acouH[0] is m45:inst1|acouH[0]
+--register power-up is low
+
+E1_acouH[0] = DFFEAS(E1L3, G1_clk_out, CR,  ,  , E1_acouH[0],  ,  , E1L8);
+
+
+--E1_acouH[1] is m45:inst1|acouH[1]
+--register power-up is low
+
+E1_acouH[1] = DFFEAS(E1L6, G1_clk_out, CR,  ,  , E1_acouH[1],  ,  , E1L8);
+
+
+--E1_acouH[2] is m45:inst1|acouH[2]
+--register power-up is low
+
+E1_acouH[2] = DFFEAS(E1L12, G1_clk_out, CR,  ,  , E1_acouH[2],  ,  , E1L8);
+
+
+--E1_acouH[3] is m45:inst1|acouH[3]
+--register power-up is low
+
+E1_acouH[3] = DFFEAS(E1L15, G1_clk_out, CR,  ,  , E1_acouH[3],  ,  , E1L8);
+
+
+--E1_bcouL[0] is m45:inst1|bcouL[0]
+--register power-up is low
+
+E1_bcouL[0] = DFFEAS(E1L79, G1_clk_out, CR,  ,  , E1L91,  ,  , !HOLD);
+
+
+--E1_bcouL[2] is m45:inst1|bcouL[2]
+--register power-up is low
+
+E1_bcouL[2] = DFFEAS(E1L83, G1_clk_out, CR,  ,  , E1L95,  ,  , !HOLD);
+
+
+--E1_bcouL[3] is m45:inst1|bcouL[3]
+--register power-up is low
+
+E1_bcouL[3] = DFFEAS(E1L89, G1_clk_out, CR,  ,  , E1L97,  ,  , !HOLD);
+
+
+--E1L3 is m45:inst1|acouH[0]~0
+E1L3 = (E1L10 & ((E1_atempH[0]))) # (!E1L10 & (!E1L17));
+
+
+--E1L6 is m45:inst1|acouH[1]~1
+E1L6 = (E1L10 & (E1_atempH[1])) # (!E1L10 & ((E1L18)));
+
+
+--E1L12 is m45:inst1|acouH[2]~2
+E1L12 = (E1L10 & ((E1_atempH[2]))) # (!E1L10 & (E1L19));
+
+
+--E1L15 is m45:inst1|acouH[3]~3
+E1L15 = (E1L10 & (E1_atempH[3])) # (!E1L10 & ((E1L20)));
+
+
+--E1L79 is m45:inst1|bcouL[0]~0
+E1L79 = (E1L86 & ((!E1_bcouL[0]))) # (!E1L86 & (E1L131));
+
+
+--E1L83 is m45:inst1|bcouL[2]~1
+E1L83 = (E1L86 & ((!E1L48))) # (!E1L86 & (!E1L94));
+
+
+--E1L89 is m45:inst1|bcouL[3]~2
+E1L89 = (E1L86 & ((!E1L49))) # (!E1L86 & (!E1L96));
+
+
+--D1_counter[3] is control:inst|counter[3]
+--register power-up is low
+
+D1_counter[3] = DFFEAS(D1L16, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[4] is control:inst|counter[4]
+--register power-up is low
+
+D1_counter[4] = DFFEAS(D1L19, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[5] is control:inst|counter[5]
+--register power-up is low
+
+D1_counter[5] = DFFEAS(D1L22, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[6] is control:inst|counter[6]
+--register power-up is low
+
+D1_counter[6] = DFFEAS(D1L27, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[2] is control:inst|counter[2]
+--register power-up is low
+
+D1_counter[2] = DFFEAS(D1L13, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[1] is control:inst|counter[1]
+--register power-up is low
+
+D1_counter[1] = DFFEAS(D1L10, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--D1_counter[0] is control:inst|counter[0]
+--register power-up is low
+
+D1_counter[0] = DFFEAS(D1L7, G1_clk_out,  ,  , D1L26,  ,  , D1L25,  );
+
+
+--G1_count[16] is devide:inst4|count[16]
+--register power-up is low
+
+G1_count[16] = DFFEAS(G1L53, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[18] is devide:inst4|count[18]
+--register power-up is low
+
+G1_count[18] = DFFEAS(G1L59, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[12] is devide:inst4|count[12]
+--register power-up is low
+
+G1_count[12] = DFFEAS(G1L41, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[13] is devide:inst4|count[13]
+--register power-up is low
+
+G1_count[13] = DFFEAS(G1L44, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[14] is devide:inst4|count[14]
+--register power-up is low
+
+G1_count[14] = DFFEAS(G1L47, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[15] is devide:inst4|count[15]
+--register power-up is low
+
+G1_count[15] = DFFEAS(G1L50, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[7] is devide:inst4|count[7]
+--register power-up is low
+
+G1_count[7] = DFFEAS(G1L26, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[8] is devide:inst4|count[8]
+--register power-up is low
+
+G1_count[8] = DFFEAS(G1L29, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[9] is devide:inst4|count[9]
+--register power-up is low
+
+G1_count[9] = DFFEAS(G1L32, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[10] is devide:inst4|count[10]
+--register power-up is low
+
+G1_count[10] = DFFEAS(G1L35, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[11] is devide:inst4|count[11]
+--register power-up is low
+
+G1_count[11] = DFFEAS(G1L38, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[17] is devide:inst4|count[17]
+--register power-up is low
+
+G1_count[17] = DFFEAS(G1L56, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[19] is devide:inst4|count[19]
+--register power-up is low
+
+G1_count[19] = DFFEAS(G1L62, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[20] is devide:inst4|count[20]
+--register power-up is low
+
+G1_count[20] = DFFEAS(G1L65, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[21] is devide:inst4|count[21]
+--register power-up is low
+
+G1_count[21] = DFFEAS(G1L68, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[22] is devide:inst4|count[22]
+--register power-up is low
+
+G1_count[22] = DFFEAS(G1L71, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[23] is devide:inst4|count[23]
+--register power-up is low
+
+G1_count[23] = DFFEAS(G1L74, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[24] is devide:inst4|count[24]
+--register power-up is low
+
+G1_count[24] = DFFEAS(G1L77, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[25] is devide:inst4|count[25]
+--register power-up is low
+
+G1_count[25] = DFFEAS(G1L80, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--D1L7 is control:inst|counter[0]~7
+D1L7 = D1_counter[0] $ (VCC);
+
+--D1L8 is control:inst|counter[0]~8
+D1L8 = CARRY(D1_counter[0]);
+
+
+--D1L10 is control:inst|counter[1]~9
+D1L10 = (D1_counter[1] & (!D1L8)) # (!D1_counter[1] & ((D1L8) # (GND)));
+
+--D1L11 is control:inst|counter[1]~10
+D1L11 = CARRY((!D1L8) # (!D1_counter[1]));
+
+
+--D1L13 is control:inst|counter[2]~11
+D1L13 = (D1_counter[2] & (D1L11 $ (GND))) # (!D1_counter[2] & (!D1L11 & VCC));
+
+--D1L14 is control:inst|counter[2]~12
+D1L14 = CARRY((D1_counter[2] & !D1L11));
+
+
+--D1L16 is control:inst|counter[3]~13
+D1L16 = (D1_counter[3] & (!D1L14)) # (!D1_counter[3] & ((D1L14) # (GND)));
+
+--D1L17 is control:inst|counter[3]~14
+D1L17 = CARRY((!D1L14) # (!D1_counter[3]));
+
+
+--D1L19 is control:inst|counter[4]~17
+D1L19 = (D1_counter[4] & (D1L17 $ (GND))) # (!D1_counter[4] & (!D1L17 & VCC));
+
+--D1L20 is control:inst|counter[4]~18
+D1L20 = CARRY((D1_counter[4] & !D1L17));
+
+
+--D1L22 is control:inst|counter[5]~19
+D1L22 = (D1_counter[5] & (!D1L20)) # (!D1_counter[5] & ((D1L20) # (GND)));
+
+--D1L23 is control:inst|counter[5]~20
+D1L23 = CARRY((!D1L20) # (!D1_counter[5]));
+
+
+--D1L27 is control:inst|counter[6]~21
+D1L27 = D1_counter[6] $ (!D1L23);
+
+
+--G1_count[6] is devide:inst4|count[6]
+--register power-up is low
+
+G1_count[6] = DFFEAS(G1L23, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[5] is devide:inst4|count[5]
+--register power-up is low
+
+G1_count[5] = DFFEAS(G1L20, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[4] is devide:inst4|count[4]
+--register power-up is low
+
+G1_count[4] = DFFEAS(G1L17, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[3] is devide:inst4|count[3]
+--register power-up is low
+
+G1_count[3] = DFFEAS(G1L14, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[2] is devide:inst4|count[2]
+--register power-up is low
+
+G1_count[2] = DFFEAS(G1L11, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[1] is devide:inst4|count[1]
+--register power-up is low
+
+G1_count[1] = DFFEAS(G1L8, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1_count[0] is devide:inst4|count[0]
+--register power-up is low
+
+G1_count[0] = DFFEAS(G1L5, CLK,  ,  ,  ,  ,  , !G1L88,  );
+
+
+--G1L5 is devide:inst4|count[0]~26
+G1L5 = G1_count[0] $ (VCC);
+
+--G1L6 is devide:inst4|count[0]~27
+G1L6 = CARRY(G1_count[0]);
+
+
+--G1L8 is devide:inst4|count[1]~28
+G1L8 = (G1_count[1] & (!G1L6)) # (!G1_count[1] & ((G1L6) # (GND)));
+
+--G1L9 is devide:inst4|count[1]~29
+G1L9 = CARRY((!G1L6) # (!G1_count[1]));
+
+
+--G1L11 is devide:inst4|count[2]~30
+G1L11 = (G1_count[2] & (G1L9 $ (GND))) # (!G1_count[2] & (!G1L9 & VCC));
+
+--G1L12 is devide:inst4|count[2]~31
+G1L12 = CARRY((G1_count[2] & !G1L9));
+
+
+--G1L14 is devide:inst4|count[3]~32
+G1L14 = (G1_count[3] & (!G1L12)) # (!G1_count[3] & ((G1L12) # (GND)));
+
+--G1L15 is devide:inst4|count[3]~33
+G1L15 = CARRY((!G1L12) # (!G1_count[3]));
+
+
+--G1L17 is devide:inst4|count[4]~34
+G1L17 = (G1_count[4] & (G1L15 $ (GND))) # (!G1_count[4] & (!G1L15 & VCC));
+
+--G1L18 is devide:inst4|count[4]~35
+G1L18 = CARRY((G1_count[4] & !G1L15));
+
+
+--G1L20 is devide:inst4|count[5]~36
+G1L20 = (G1_count[5] & (!G1L18)) # (!G1_count[5] & ((G1L18) # (GND)));
+
+--G1L21 is devide:inst4|count[5]~37
+G1L21 = CARRY((!G1L18) # (!G1_count[5]));
+
+
+--G1L23 is devide:inst4|count[6]~38
+G1L23 = (G1_count[6] & (G1L21 $ (GND))) # (!G1_count[6] & (!G1L21 & VCC));
+
+--G1L24 is devide:inst4|count[6]~39
+G1L24 = CARRY((G1_count[6] & !G1L21));
+
+
+--G1L26 is devide:inst4|count[7]~40
+G1L26 = (G1_count[7] & (!G1L24)) # (!G1_count[7] & ((G1L24) # (GND)));
+
+--G1L27 is devide:inst4|count[7]~41
+G1L27 = CARRY((!G1L24) # (!G1_count[7]));
+
+
+--G1L29 is devide:inst4|count[8]~42
+G1L29 = (G1_count[8] & (G1L27 $ (GND))) # (!G1_count[8] & (!G1L27 & VCC));
+
+--G1L30 is devide:inst4|count[8]~43
+G1L30 = CARRY((G1_count[8] & !G1L27));
+
+
+--G1L32 is devide:inst4|count[9]~44
+G1L32 = (G1_count[9] & (!G1L30)) # (!G1_count[9] & ((G1L30) # (GND)));
+
+--G1L33 is devide:inst4|count[9]~45
+G1L33 = CARRY((!G1L30) # (!G1_count[9]));
+
+
+--G1L35 is devide:inst4|count[10]~46
+G1L35 = (G1_count[10] & (G1L33 $ (GND))) # (!G1_count[10] & (!G1L33 & VCC));
+
+--G1L36 is devide:inst4|count[10]~47
+G1L36 = CARRY((G1_count[10] & !G1L33));
+
+
+--G1L38 is devide:inst4|count[11]~48
+G1L38 = (G1_count[11] & (!G1L36)) # (!G1_count[11] & ((G1L36) # (GND)));
+
+--G1L39 is devide:inst4|count[11]~49
+G1L39 = CARRY((!G1L36) # (!G1_count[11]));
+
+
+--G1L41 is devide:inst4|count[12]~50
+G1L41 = (G1_count[12] & (G1L39 $ (GND))) # (!G1_count[12] & (!G1L39 & VCC));
+
+--G1L42 is devide:inst4|count[12]~51
+G1L42 = CARRY((G1_count[12] & !G1L39));
+
+
+--G1L44 is devide:inst4|count[13]~52
+G1L44 = (G1_count[13] & (!G1L42)) # (!G1_count[13] & ((G1L42) # (GND)));
+
+--G1L45 is devide:inst4|count[13]~53
+G1L45 = CARRY((!G1L42) # (!G1_count[13]));
+
+
+--G1L47 is devide:inst4|count[14]~54
+G1L47 = (G1_count[14] & (G1L45 $ (GND))) # (!G1_count[14] & (!G1L45 & VCC));
+
+--G1L48 is devide:inst4|count[14]~55
+G1L48 = CARRY((G1_count[14] & !G1L45));
+
+
+--G1L50 is devide:inst4|count[15]~56
+G1L50 = (G1_count[15] & (!G1L48)) # (!G1_count[15] & ((G1L48) # (GND)));
+
+--G1L51 is devide:inst4|count[15]~57
+G1L51 = CARRY((!G1L48) # (!G1_count[15]));
+
+
+--G1L53 is devide:inst4|count[16]~58
+G1L53 = (G1_count[16] & (G1L51 $ (GND))) # (!G1_count[16] & (!G1L51 & VCC));
+
+--G1L54 is devide:inst4|count[16]~59
+G1L54 = CARRY((G1_count[16] & !G1L51));
+
+
+--G1L56 is devide:inst4|count[17]~60
+G1L56 = (G1_count[17] & (!G1L54)) # (!G1_count[17] & ((G1L54) # (GND)));
+
+--G1L57 is devide:inst4|count[17]~61
+G1L57 = CARRY((!G1L54) # (!G1_count[17]));
+
+
+--G1L59 is devide:inst4|count[18]~62
+G1L59 = (G1_count[18] & (G1L57 $ (GND))) # (!G1_count[18] & (!G1L57 & VCC));
+
+--G1L60 is devide:inst4|count[18]~63
+G1L60 = CARRY((G1_count[18] & !G1L57));
+
+
+--G1L62 is devide:inst4|count[19]~64
+G1L62 = (G1_count[19] & (!G1L60)) # (!G1_count[19] & ((G1L60) # (GND)));
+
+--G1L63 is devide:inst4|count[19]~65
+G1L63 = CARRY((!G1L60) # (!G1_count[19]));
+
+
+--G1L65 is devide:inst4|count[20]~66
+G1L65 = (G1_count[20] & (G1L63 $ (GND))) # (!G1_count[20] & (!G1L63 & VCC));
+
+--G1L66 is devide:inst4|count[20]~67
+G1L66 = CARRY((G1_count[20] & !G1L63));
+
+
+--G1L68 is devide:inst4|count[21]~68
+G1L68 = (G1_count[21] & (!G1L66)) # (!G1_count[21] & ((G1L66) # (GND)));
+
+--G1L69 is devide:inst4|count[21]~69
+G1L69 = CARRY((!G1L66) # (!G1_count[21]));
+
+
+--G1L71 is devide:inst4|count[22]~70
+G1L71 = (G1_count[22] & (G1L69 $ (GND))) # (!G1_count[22] & (!G1L69 & VCC));
+
+--G1L72 is devide:inst4|count[22]~71
+G1L72 = CARRY((G1_count[22] & !G1L69));
+
+
+--G1L74 is devide:inst4|count[23]~72
+G1L74 = (G1_count[23] & (!G1L72)) # (!G1_count[23] & ((G1L72) # (GND)));
+
+--G1L75 is devide:inst4|count[23]~73
+G1L75 = CARRY((!G1L72) # (!G1_count[23]));
+
+
+--G1L77 is devide:inst4|count[24]~74
+G1L77 = (G1_count[24] & (G1L75 $ (GND))) # (!G1_count[24] & (!G1L75 & VCC));
+
+--G1L78 is devide:inst4|count[24]~75
+G1L78 = CARRY((G1_count[24] & !G1L75));
+
+
+--G1L80 is devide:inst4|count[25]~76
+G1L80 = G1_count[25] $ (G1L78);
+
+
+--AR is AR
+AR = OUTPUT(D1L2);
+
+
+--AG is AG
+AG = OUTPUT(D1L31);
+
+
+--AY is AY
+AY = OUTPUT(D1_current_state.s1);
+
+
+--BR is BR
+BR = OUTPUT(D1L4);
+
+
+--BG is BG
+BG = OUTPUT(D1_current_state.s2);
+
+
+--BY is BY
+BY = OUTPUT(D1_current_state.s3);
+
+
+--BL is BL
+BL = OUTPUT(E1_acouL[1]);
+
+
+--CL is CL
+CL = OUTPUT(E1_acouL[2]);
+
+
+--AL is AL
+AL = OUTPUT(E1_acouL[0]);
+
+
+--AH is AH
+AH = OUTPUT(E1_acouH[0]);
+
+
+--BH is BH
+BH = OUTPUT(E1_acouH[1]);
+
+
+--CH is CH
+CH = OUTPUT(E1_acouH[2]);
+
+
+--DH is DH
+DH = OUTPUT(E1_acouH[3]);
+
+
+--DL is DL
+DL = OUTPUT(E1_acouL[3]);
+
+
+--2AL is 2AL
+2AL = OUTPUT(E1_bcouL[0]);
+
+
+--2BL is 2BL
+2BL = OUTPUT(E1_bcouL[1]);
+
+
+--2CL is 2CL
+2CL = OUTPUT(E1_bcouL[2]);
+
+
+--2DL is 2DL
+2DL = OUTPUT(E1_bcouL[3]);
+
+
+--2AH is 2AH
+2AH = OUTPUT(E1_bcouH[0]);
+
+
+--2BH is 2BH
+2BH = OUTPUT(E1_bcouH[1]);
+
+
+--2CH is 2CH
+2CH = OUTPUT(E1_bcouH[2]);
+
+
+--2DH is 2DH
+2DH = OUTPUT(E1_bcouH[3]);
+
+
+--D1_current_state.s1 is control:inst|current_state.s1
+--register power-up is low
+
+D1_current_state.s1 = DFFEAS(D1_next_state.s1_233, G1_clk_out,  ,  ,  ,  ,  ,  ,  );
+
+
+--D1_current_state.s0 is control:inst|current_state.s0
+--register power-up is low
+
+D1_current_state.s0 = DFFEAS(D1L30, G1_clk_out,  ,  ,  ,  ,  ,  ,  );
+
+
+--D1L1 is control:inst|ared~0
+D1L1 = (D1_current_state.s1) # (!D1_current_state.s0);
+
+
+--D1_current_state.s2 is control:inst|current_state.s2
+--register power-up is low
+
+D1_current_state.s2 = DFFEAS(D1_next_state.s2_217, G1_clk_out,  ,  ,  ,  ,  ,  ,  );
+
+
+--D1_current_state.s3 is control:inst|current_state.s3
+--register power-up is low
+
+D1_current_state.s3 = DFFEAS(D1_next_state.s3_201, G1_clk_out,  ,  ,  ,  ,  ,  ,  );
+
+
+--D1L3 is control:inst|bred~0
+D1L3 = (D1_current_state.s2) # (D1_current_state.s3);
+
+
+--E1_acouL[1] is m45:inst1|acouL[1]
+--register power-up is low
+
+E1_acouL[1] = DFFEAS(E1L29, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_acouL[2] is m45:inst1|acouL[2]
+--register power-up is low
+
+E1_acouL[2] = DFFEAS(E1L33, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_acouL[0] is m45:inst1|acouL[0]
+--register power-up is low
+
+E1_acouL[0] = DFFEAS(E1L36, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_acouL[3] is m45:inst1|acouL[3]
+--register power-up is low
+
+E1_acouL[3] = DFFEAS(E1L40, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_bcouL[1] is m45:inst1|bcouL[1]
+--register power-up is low
+
+E1_bcouL[1] = DFFEAS(E1L93, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_bcouH[0] is m45:inst1|bcouH[0]
+--register power-up is low
+
+E1_bcouH[0] = DFFEAS(E1L69, G1_clk_out, CR,  , E1L64,  ,  ,  ,  );
+
+
+--E1_bcouH[1] is m45:inst1|bcouH[1]
+--register power-up is low
+
+E1_bcouH[1] = DFFEAS(E1L71, G1_clk_out, CR,  , E1L64,  ,  ,  ,  );
+
+
+--E1_bcouH[2] is m45:inst1|bcouH[2]
+--register power-up is low
+
+E1_bcouH[2] = DFFEAS(E1L74, G1_clk_out, CR,  , E1L64,  ,  ,  ,  );
+
+
+--E1_bcouH[3] is m45:inst1|bcouH[3]
+--register power-up is low
+
+E1_bcouH[3] = DFFEAS(E1L76, G1_clk_out, CR,  , E1L64,  ,  ,  ,  );
+
+
+--G1_clk_out is devide:inst4|clk_out
+--register power-up is low
+
+G1_clk_out = DFFEAS(G1L2, CLK,  ,  ,  ,  ,  ,  ,  );
+
+
+--E1_atempL[1] is m45:inst1|atempL[1]
+--register power-up is low
+
+E1_atempL[1] = DFFEAS(E1L43, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L123 is m45:inst1|Equal6~0
+E1L123 = (((!E1_acouL[3]) # (!E1_acouL[0])) # (!E1_acouL[2])) # (!E1_acouL[1]);
+
+
+--HOLD is HOLD
+HOLD = INPUT();
+
+
+--E1L27 is m45:inst1|acouL~0
+E1L27 = (!HOLD & ((E1_atempL[1]) # (E1L123)));
+
+
+--E1_current_state.s2 is m45:inst1|current_state.s2
+--register power-up is low
+
+E1_current_state.s2 = DFFEAS(E1L116, G1_clk_out, CR,  , !E1L120,  ,  ,  ,  );
+
+
+--E1L124 is m45:inst1|process_0~4
+E1L124 = (!E1_bcouH[0] & (!E1_bcouH[1] & (!E1_bcouH[2] & !E1_bcouH[3])));
+
+
+--E1L125 is m45:inst1|process_0~5
+E1L125 = (E1_bcouL[0] & (!E1_bcouL[1] & (!E1_bcouL[2] & !E1_bcouL[3])));
+
+
+--E1L126 is m45:inst1|process_0~6
+E1L126 = (E1_current_state.s2 & (E1L124 & E1L125));
+
+
+--E1_current_state.s3 is m45:inst1|current_state.s3
+--register power-up is low
+
+E1_current_state.s3 = DFFEAS(E1L126, G1_clk_out, CR,  , !E1L120,  ,  ,  ,  );
+
+
+--E1L127 is m45:inst1|process_0~7
+E1L127 = ((!E1_current_state.s3) # (!E1L125)) # (!E1L124);
+
+
+--E1L122 is m45:inst1|Equal5~0
+E1L122 = (E1_acouL[1]) # ((E1_acouL[2]) # ((E1_acouL[0]) # (E1_acouL[3])));
+
+
+--E1L24 is m45:inst1|acouL[1]~1
+E1L24 = (E1L126) # ((E1L127 & E1L122));
+
+
+--E1_current_state.s0 is m45:inst1|current_state.s0
+--register power-up is low
+
+E1_current_state.s0 = DFFEAS(E1L113, G1_clk_out, CR,  ,  ,  ,  ,  ,  );
+
+
+--E1_current_state.s1 is m45:inst1|current_state.s1
+--register power-up is low
+
+E1_current_state.s1 = DFFEAS(E1L132, G1_clk_out, CR,  , !E1L120,  ,  ,  ,  );
+
+
+--E1L128 is m45:inst1|process_0~8
+E1L128 = (!E1_acouH[0] & (!E1_acouH[1] & (!E1_acouH[2] & !E1_acouH[3])));
+
+
+--E1L129 is m45:inst1|process_0~9
+E1L129 = (E1_acouL[0] & (!E1_acouL[1] & (!E1_acouL[2] & !E1_acouL[3])));
+
+
+--E1L118 is m45:inst1|current_state~8
+E1L118 = (((E1_current_state.s0 & !E1_current_state.s1)) # (!E1L129)) # (!E1L128);
+
+
+--E1L28 is m45:inst1|acouL~2
+E1L28 = (HOLD & E1L118);
+
+
+--E1L43 is m45:inst1|Add1~0
+E1L43 = E1_acouL[1] $ (!E1_acouL[0]);
+
+
+--E1L29 is m45:inst1|acouL~3
+E1L29 = (E1L27) # ((E1L24 & (E1L28 & E1L43)));
+
+
+--CR is CR
+CR = INPUT();
+
+
+--E1_atempL[2] is m45:inst1|atempL[2]
+--register power-up is low
+
+E1_atempL[2] = DFFEAS(E1L44, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L121 is m45:inst1|Equal0~0
+E1L121 = (!E1_bcouL[0] & (!E1_bcouL[1] & (!E1_bcouL[2] & !E1_bcouL[3])));
+
+
+--E1L130 is m45:inst1|process_0~10
+E1L130 = (E1L124 & (E1L128 & (E1L121 & !E1L122)));
+
+
+--E1L131 is m45:inst1|process_0~11
+E1L131 = ((!E1_current_state.s1) # (!E1L129)) # (!E1L128);
+
+
+--E1L132 is m45:inst1|process_0~12
+E1L132 = (E1L128 & (E1L129 & !E1_current_state.s0));
+
+
+--E1L30 is m45:inst1|acouL~4
+E1L30 = (E1L130) # (((E1L131 & !E1L132)) # (!HOLD));
+
+
+--E1L31 is m45:inst1|acouL~5
+E1L31 = ((!HOLD & ((E1L123) # (E1_atempL[2])))) # (!E1L30);
+
+
+--E1L32 is m45:inst1|acouL~6
+E1L32 = (HOLD & !E1L130);
+
+
+--E1L44 is m45:inst1|Add1~1
+E1L44 = E1_acouL[2] $ (((!E1_acouL[1] & !E1_acouL[0])));
+
+
+--E1L33 is m45:inst1|acouL~7
+E1L33 = (E1L31) # ((E1L24 & (E1L32 & E1L44)));
+
+
+--E1L34 is m45:inst1|acouL~8
+E1L34 = (E1L32 & ((E1L24 & ((!E1_acouL[0]))) # (!E1L24 & (E1L127))));
+
+
+--E1_atempL[0] is m45:inst1|atempL[0]
+--register power-up is low
+
+E1_atempL[0] = DFFEAS(E1L57, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L35 is m45:inst1|acouL~9
+E1L35 = (!HOLD & ((E1L123) # (E1_atempL[0])));
+
+
+--E1L36 is m45:inst1|acouL~10
+E1L36 = (E1L34) # ((E1L35) # (!E1L30));
+
+
+--E1L37 is m45:inst1|acouL~11
+E1L37 = (E1L127 & (HOLD & (E1L118 & !E1L130)));
+
+
+--E1L17 is m45:inst1|acouH~6
+E1L17 = (E1L37 & (E1_acouH[0])) # (!E1L37 & ((HOLD)));
+
+
+--E1_atempH[0] is m45:inst1|atempH[0]
+--register power-up is low
+
+E1_atempH[0] = DFFEAS(E1_acouH[0], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L8 is m45:inst1|acouH[1]~7
+E1L8 = (E1L123 & (HOLD & (E1L118 & E1L24)));
+
+
+--E1_atempH[1] is m45:inst1|atempH[1]
+--register power-up is low
+
+E1_atempH[1] = DFFEAS(E1_acouH[1], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L9 is m45:inst1|acouH[1]~8
+E1L9 = (E1L127 & (E1L118 & !E1L130));
+
+
+--E1L18 is m45:inst1|acouH~9
+E1L18 = ((E1L9 & (E1_acouH[0] $ (!E1_acouH[1])))) # (!HOLD);
+
+
+--E1L41 is m45:inst1|Add0~0
+E1L41 = E1_acouH[2] $ (((E1_acouH[0]) # (E1_acouH[1])));
+
+
+--E1L19 is m45:inst1|acouH~10
+E1L19 = (HOLD & (!E1L132 & ((!E1L41) # (!E1L37)))) # (!HOLD & (((!E1L41) # (!E1L37))));
+
+
+--E1_atempH[2] is m45:inst1|atempH[2]
+--register power-up is low
+
+E1_atempH[2] = DFFEAS(E1_acouH[2], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1_atempH[3] is m45:inst1|atempH[3]
+--register power-up is low
+
+E1_atempH[3] = DFFEAS(E1_acouH[3], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L42 is m45:inst1|Add0~1
+E1L42 = E1_acouH[3] $ (((E1_acouH[0]) # ((E1_acouH[1]) # (E1_acouH[2]))));
+
+
+--E1L20 is m45:inst1|acouH~11
+E1L20 = ((E1L9 & !E1L42)) # (!HOLD);
+
+
+--E1L45 is m45:inst1|Add1~2
+E1L45 = E1_acouL[3] $ (((!E1_acouL[1] & (!E1_acouL[2] & !E1_acouL[0]))));
+
+
+--E1L38 is m45:inst1|acouL~12
+E1L38 = (!E1L130 & E1L45);
+
+
+--E1L39 is m45:inst1|acouL~13
+E1L39 = (E1L24 & (E1L28 & (E1L38))) # (!E1L24 & (((E1L37))));
+
+
+--E1_atempL[3] is m45:inst1|atempL[3]
+--register power-up is low
+
+E1_atempL[3] = DFFEAS(E1L45, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L40 is m45:inst1|acouL~14
+E1L40 = (E1L39) # ((!HOLD & ((E1L123) # (E1_atempL[3]))));
+
+
+--E1L85 is m45:inst1|bcouL[2]~3
+E1L85 = (((!E1_current_state.s2 & !E1_current_state.s3)) # (!E1L125)) # (!E1L124);
+
+
+--E1L86 is m45:inst1|bcouL[2]~4
+E1L86 = (E1L132) # ((E1L131 & (E1L85 & !E1L121)));
+
+
+--E1_btempL[0] is m45:inst1|btempL[0]
+--register power-up is low
+
+E1_btempL[0] = DFFEAS(E1L106, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L91 is m45:inst1|bcouL~5
+E1L91 = (E1L123) # (E1_btempL[0]);
+
+
+--E1_btempL[1] is m45:inst1|btempL[1]
+--register power-up is low
+
+E1_btempL[1] = DFFEAS(E1L47, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L92 is m45:inst1|bcouL~6
+E1L92 = (E1L123) # (E1_btempL[1]);
+
+
+--E1L47 is m45:inst1|Add3~0
+E1L47 = E1_bcouL[0] $ (!E1_bcouL[1]);
+
+
+--E1L93 is m45:inst1|bcouL~7
+E1L93 = (HOLD & (((E1L86 & E1L47)))) # (!HOLD & (E1L92));
+
+
+--E1L119 is m45:inst1|current_state~9
+E1L119 = (E1L124 & (E1L125 & ((E1_current_state.s2) # (E1_current_state.s3))));
+
+
+--E1L94 is m45:inst1|bcouL~8
+E1L94 = (!E1L130 & !E1L119);
+
+
+--E1L48 is m45:inst1|Add3~1
+E1L48 = E1_bcouL[2] $ (((E1_bcouL[0]) # (E1_bcouL[1])));
+
+
+--E1_btempL[2] is m45:inst1|btempL[2]
+--register power-up is low
+
+E1_btempL[2] = DFFEAS(E1L109, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L95 is m45:inst1|bcouL~9
+E1L95 = (E1L123) # (E1_btempL[2]);
+
+
+--E1L96 is m45:inst1|bcouL~10
+E1L96 = (E1L130) # ((E1L119) # (!E1L131));
+
+
+--E1L49 is m45:inst1|Add3~2
+E1L49 = E1_bcouL[3] $ (((E1_bcouL[0]) # ((E1_bcouL[1]) # (E1_bcouL[2]))));
+
+
+--E1_btempL[3] is m45:inst1|btempL[3]
+--register power-up is low
+
+E1_btempL[3] = DFFEAS(E1L111, G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L97 is m45:inst1|bcouL~11
+E1L97 = (E1L123) # (E1_btempL[3]);
+
+
+--E1_btempH[0] is m45:inst1|btempH[0]
+--register power-up is low
+
+E1_btempH[0] = DFFEAS(E1_bcouH[0], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L68 is m45:inst1|bcouH~0
+E1L68 = ((!E1_bcouH[0] & !E1L96)) # (!HOLD);
+
+
+--E1L87 is m45:inst1|bcouL[2]~12
+E1L87 = (E1L127 & (E1L131 & (!E1L126 & !E1L121)));
+
+
+--E1L63 is m45:inst1|bcouH[0]~1
+E1L63 = (HOLD & ((E1L132) # ((E1L87)))) # (!HOLD & (((!E1L123))));
+
+
+--E1L69 is m45:inst1|bcouH~2
+E1L69 = (E1L63 & (E1_btempH[0])) # (!E1L63 & ((E1L68)));
+
+
+--E1L64 is m45:inst1|bcouH[0]~3
+E1L64 = ((!E1L132 & ((!E1L87) # (!E1L123)))) # (!HOLD);
+
+
+--E1_btempH[1] is m45:inst1|btempH[1]
+--register power-up is low
+
+E1_btempH[1] = DFFEAS(E1_bcouH[1], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L70 is m45:inst1|bcouH~4
+E1L70 = ((!E1L96 & (E1_bcouH[0] $ (!E1_bcouH[1])))) # (!HOLD);
+
+
+--E1L71 is m45:inst1|bcouH~5
+E1L71 = (E1L63 & (E1_btempH[1])) # (!E1L63 & ((E1L70)));
+
+
+--E1_btempH[2] is m45:inst1|btempH[2]
+--register power-up is low
+
+E1_btempH[2] = DFFEAS(E1_bcouH[2], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L72 is m45:inst1|bcouH~6
+E1L72 = (E1_bcouH[2] $ (((!E1_bcouH[0] & !E1_bcouH[1])))) # (!HOLD);
+
+
+--E1L73 is m45:inst1|bcouH~7
+E1L73 = (E1L96 & (((!HOLD) # (!E1L126)))) # (!E1L96 & (E1L72));
+
+
+--E1L74 is m45:inst1|bcouH~8
+E1L74 = (E1L63 & (E1_btempH[2])) # (!E1L63 & ((E1L73)));
+
+
+--E1_btempH[3] is m45:inst1|btempH[3]
+--register power-up is low
+
+E1_btempH[3] = DFFEAS(E1_bcouH[3], G1_clk_out,  ,  , E1L100,  ,  ,  ,  );
+
+
+--E1L46 is m45:inst1|Add2~0
+E1L46 = E1_bcouH[3] $ (((E1_bcouH[0]) # ((E1_bcouH[1]) # (E1_bcouH[2]))));
+
+
+--E1L75 is m45:inst1|bcouH~9
+E1L75 = (E1L131 & (!E1L130 & (!E1L119 & !E1L46)));
+
+
+--E1L76 is m45:inst1|bcouH~10
+E1L76 = (E1L63 & (E1_btempH[3])) # (!E1L63 & (((E1L75) # (!HOLD))));
+
+
+--D1L55 is control:inst|Selector7~0
+D1L55 = (!D1_counter[6] & (((!D1_counter[3] & !D1_counter[4])) # (!D1_counter[5])));
+
+
+--D1L52 is control:inst|Selector5~0
+D1L52 = (HOLD & (!D1_current_state.s0 & !D1L55));
+
+
+--D1_current_state.s4 is control:inst|current_state.s4
+--register power-up is low
+
+D1_current_state.s4 = DFFEAS(D1_next_state.s4_185, G1_clk_out,  ,  ,  ,  ,  ,  ,  );
+
+
+--D1L53 is control:inst|Selector5~1
+D1L53 = (HOLD & ((D1_current_state.s1) # ((D1_current_state.s4 & !D1L55))));
+
+
+--D1L38 is control:inst|LessThan3~0
+D1L38 = (D1_counter[2] & ((D1_counter[1]) # (D1_counter[0])));
+
+
+--D1L39 is control:inst|LessThan3~1
+D1L39 = (D1_counter[5] & ((D1_counter[4]) # ((D1_counter[3] & D1L38))));
+
+
+--D1L54 is control:inst|Selector5~2
+D1L54 = (D1L52) # ((D1L53 & (!D1_counter[6] & !D1L39)));
+
+
+--D1L36 is control:inst|LessThan0~0
+D1L36 = (D1_counter[3] & (D1_counter[4] & ((D1_counter[1]) # (D1_counter[2]))));
+
+
+--D1L56 is control:inst|Selector7~1
+D1L56 = (D1_counter[6] & ((D1_counter[5]) # (D1L36)));
+
+
+--D1L37 is control:inst|LessThan1~0
+D1L37 = (D1_counter[5]) # ((D1_counter[4] & ((D1_counter[3]) # (D1L38))));
+
+
+--D1L59 is control:inst|Selector8~0
+D1L59 = (((!D1L37) # (!D1_current_state.s4)) # (!D1L56)) # (!HOLD);
+
+
+--G1L82 is devide:inst4|LessThan0~0
+G1L82 = (!G1_count[16] & !G1_count[18]);
+
+
+--G1L83 is devide:inst4|LessThan0~1
+G1L83 = (((!G1_count[15]) # (!G1_count[14])) # (!G1_count[13])) # (!G1_count[12]);
+
+
+--G1L84 is devide:inst4|LessThan0~2
+G1L84 = (!G1_count[7] & (!G1_count[8] & (!G1_count[9] & !G1_count[10])));
+
+
+--G1L85 is devide:inst4|LessThan0~3
+G1L85 = (G1L82 & ((G1L83) # ((G1L84 & !G1_count[11]))));
+
+
+--G1L86 is devide:inst4|LessThan0~4
+G1L86 = (((!G1_count[18] & !G1_count[17])) # (!G1_count[20])) # (!G1_count[19]);
+
+
+--G1L87 is devide:inst4|LessThan0~5
+G1L87 = (G1L86) # (((!G1_count[23]) # (!G1_count[22])) # (!G1_count[21]));
+
+
+--G1L88 is devide:inst4|LessThan0~6
+G1L88 = ((!G1_count[24] & ((G1L85) # (G1L87)))) # (!G1_count[25]);
+
+
+--CLK is CLK
+CLK = INPUT();
+
+
+--D1L57 is control:inst|Selector7~2
+D1L57 = (D1L55 & ((D1_current_state.s4) # (!D1_current_state.s0)));
+
+
+--D1L58 is control:inst|Selector7~3
+D1L58 = (HOLD & ((D1L57) # ((D1_current_state.s3 & D1L56))));
+
+
+--D1L47 is control:inst|Selector3~0
+D1L47 = (D1_counter[6] & ((D1L37))) # (!D1_counter[6] & (D1L39));
+
+
+--D1L48 is control:inst|Selector3~1
+D1L48 = (D1_current_state.s4 & ((D1_counter[6]) # ((D1_counter[3]) # (D1_counter[4]))));
+
+
+--D1L49 is control:inst|Selector3~2
+D1L49 = (D1_current_state.s1 & (!D1_current_state.s2 & ((!D1_counter[6])))) # (!D1_current_state.s1 & ((D1_current_state.s2 & ((D1_counter[6]))) # (!D1_current_state.s2 & (D1L48))));
+
+
+--D1L50 is control:inst|Selector3~3
+D1L50 = (D1_current_state.s2) # ((D1_counter[6] & ((D1_current_state.s1) # (D1L48))));
+
+
+--D1L51 is control:inst|Selector3~4
+D1L51 = (HOLD & (D1L50 $ (((D1L47 & D1L49)))));
+
+
+--D1L45 is control:inst|Selector1~0
+D1L45 = (D1_counter[6] & (D1L37 & ((D1_current_state.s2) # (D1_current_state.s4))));
+
+
+--D1L46 is control:inst|Selector1~1
+D1L46 = (HOLD & ((D1L45) # ((D1_current_state.s3 & !D1L56))));
+
+
+--E1L100 is m45:inst1|btempH[0]~0
+E1L100 = (HOLD & CR);
+
+
+--E1L120 is m45:inst1|current_state~10
+E1L120 = ((E1L118 & !E1L119)) # (!HOLD);
+
+
+--E1L113 is m45:inst1|current_state.s0~0
+E1L113 = (E1L120 & (E1_current_state.s0)) # (!E1L120 & (((E1L126) # (!E1L118))));
+
+
+--D1L25 is control:inst|counter[6]~15
+D1L25 = ((D1_counter[6] & ((D1_counter[5]) # (D1L36)))) # (!CR);
+
+
+--D1L26 is control:inst|counter[6]~16
+D1L26 = (HOLD) # (!CR);
+
+
+--E1L10 is m45:inst1|acouH[1]~12
+E1L10 = (HOLD & (E1L118 & (E1L24))) # (!HOLD & (((!E1L123))));
+
+
+--D1L30 is control:inst|current_state.s0~0
+D1L30 = !D1_next_state.s0_249;
+
+
+--G1L2 is devide:inst4|clk_out~0
+G1L2 = !G1L88;
+
+
+--E1L116 is m45:inst1|current_state.s2~0
+E1L116 = !E1L131;
+
+
+--E1L57 is m45:inst1|atempL[0]~2
+E1L57 = !E1_acouL[0];
+
+
+--E1L106 is m45:inst1|btempL[0]~0
+E1L106 = !E1_bcouL[0];
+
+
+--E1L109 is m45:inst1|btempL[2]~2
+E1L109 = !E1L48;
+
+
+--E1L111 is m45:inst1|btempL[3]~3
+E1L111 = !E1L49;
+
+
+--D1_next_state.s1_233 is control:inst|next_state.s1_233
+D1_next_state.s1_233 = (CR & ((D1L59 & (D1L54)) # (!D1L59 & ((D1_next_state.s1_233)))));
+
+
+--D1_next_state.s0_249 is control:inst|next_state.s0_249
+D1_next_state.s0_249 = (CR & ((D1L59 & (D1L58)) # (!D1L59 & ((D1_next_state.s0_249)))));
+
+
+--D1_next_state.s2_217 is control:inst|next_state.s2_217
+D1_next_state.s2_217 = (CR & ((D1L59 & (D1L51)) # (!D1L59 & ((D1_next_state.s2_217)))));
+
+
+--D1_next_state.s3_201 is control:inst|next_state.s3_201
+D1_next_state.s3_201 = (CR & ((D1L59 & (D1L46)) # (!D1L59 & ((D1_next_state.s3_201)))));
+
+
+--D1_next_state.s4_185 is control:inst|next_state.s4_185
+D1_next_state.s4_185 = ((D1L59 & (!HOLD)) # (!D1L59 & ((D1_next_state.s4_185)))) # (!CR);
+
+
+--D1L2 is control:inst|ared~0_wirecell
+D1L2 = !D1L1;
+
+
+--D1L4 is control:inst|bred~0_wirecell
+D1L4 = !D1L3;
+
+
+--D1L31 is control:inst|current_state.s0~_wirecell
+D1L31 = !D1_current_state.s0;
+
+
